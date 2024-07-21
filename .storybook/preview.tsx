@@ -15,7 +15,7 @@ const preview: Preview = {
   decorators: [
     (Story) => {
       return (
-        <Theme>
+        <Theme style={{ minHeight: "inherit" }}>
           <Story />
         </Theme>
       );
