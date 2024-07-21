@@ -14,7 +14,7 @@
     "dev": "remix vite:dev",
     "build": "remix vite:build",
     "clean": "rm -r ./build",
-    "lint": "biome lint --write ./app/**/*.tsx",
+    "lint": "biome lint ./app/**/*.tsx",
     "format": "biome format --write ./app/**/*.tsx",
     "check:format": "biome format ./app/**/*.tsx",
     "typecheck": "tsc",
