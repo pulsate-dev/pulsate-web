@@ -1,8 +1,5 @@
 pre-commit:
   commands:
-    check:format:
-      glob: '.{ts,tsx}'
-      run: pnpm run check:format
-    lint:
-      glob: '.{ts,tsx}'
-      run: pnpm run lint
+    check:
+      glob: ".{ts,tsx}"
+      run: pnpm biome check
