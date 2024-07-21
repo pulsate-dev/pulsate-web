@@ -3,3 +3,6 @@ pre-commit:
     check:
       glob: ".{ts,tsx}"
       run: pnpm biome check
+    lint:
+      glob: ".{ts,tsx}"
+      run: pnpm lint
