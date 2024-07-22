@@ -1,5 +1,5 @@
-import React from "react";
 import type { Preview } from "@storybook/react";
+import React from "react";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 
@@ -8,9 +8,9 @@ const preview: Preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i
-      }
-    }
+        date: /Date$/i,
+      },
+    },
   },
   decorators: [
     (Story) => {
@@ -19,8 +19,8 @@ const preview: Preview = {
           <Story />
         </Theme>
       );
-    }
-  ]
+    },
+  ],
 };
 
 export default preview;
