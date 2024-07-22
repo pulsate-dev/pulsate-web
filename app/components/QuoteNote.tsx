@@ -12,11 +12,15 @@ export default function QuoteNote({ author, content }: Props) {
       ml="6"
       style={{
         borderStyle: "dashed",
-        borderWidth: "1px"
+        borderWidth: "1px",
       }}
     >
-      <Avatar {...author} />
-      <NoteBody content={content} style={{ ml: "4" }} />
+      <Box pl="2" py="2">
+        <Avatar {...author} />
+      </Box>
+      <Box pl="4" pb="2">
+        <NoteBody content={content} />
+      </Box>
     </Box>
   );
 }
