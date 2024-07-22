@@ -3,7 +3,7 @@ import NoteFooter from "./NoteFooter";
 
 export default {
   title: "Note/Footer",
-  component: NoteFooter,
+  component: NoteFooter
 } satisfies Meta<typeof NoteFooter>;
 
 type Story = StoryObj<typeof NoteFooter>;

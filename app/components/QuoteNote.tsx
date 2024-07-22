@@ -12,7 +12,7 @@ export default function QuoteNote({ author, content }: Props) {
       ml="6"
       style={{
         borderStyle: "dashed",
-        borderWidth: "1px",
+        borderWidth: "1px"
       }}
     >
       <Box pl="2" py="2">
