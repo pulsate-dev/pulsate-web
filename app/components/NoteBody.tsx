@@ -1,12 +1,11 @@
-import { Button, Flex, type FlexProps, Text } from "@radix-ui/themes";
+import { Button, Flex, Text } from "@radix-ui/themes";
 import { useEffect, useRef, useState } from "react";
 
 type Props = {
   content: string | null;
-  style?: FlexProps;
 };
 
-export default function NoteBody({ content, style }: Props) {
+export default function NoteBody({ content }: Props) {
   const ref = useRef<HTMLElement>(null);
   const [height, setHeight] = useState(0);
   const [readMore, setReadMore] = useState(false);
@@ -19,12 +18,7 @@ export default function NoteBody({ content, style }: Props) {
   }, [ref]);
 
   return (
-    <Flex
-      pb="2"
-      direction="column"
-      style={{ whiteSpace: "pre-wrap" }}
-      {...style}
-    >
+    <Flex direction="column" style={{ whiteSpace: "pre-wrap" }}>
       <Text
         as="p"
         style={
@@ -33,7 +27,7 @@ export default function NoteBody({ content, style }: Props) {
                 overflow: "hidden",
                 display: "-webkit-box",
                 WebkitBoxOrient: "vertical",
-                WebkitLineClamp: 5
+                WebkitLineClamp: 5,
               }
             : {}
         }
@@ -46,6 +40,7 @@ export default function NoteBody({ content, style }: Props) {
           onClick={() => {
             setReadMore(!readMore);
           }}
+          style={{ margin: "auto", maxWidth: "100px" }}
         >
           {readMore ? "閉じる" : "続きを読む"}
         </Button>

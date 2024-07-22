@@ -8,7 +8,7 @@ type Props = {
 
 export default function Avatar({ id, name, iconUrl }: Props) {
   return (
-    <Flex align="center" gap="2" py="2" pl="2">
+    <Flex align="center" gap="2">
       <RadixAvatar
         size="5"
         radius="full"
