@@ -17,8 +17,7 @@ export default function Note({ author, content, renote }: Props) {
 
   return (
     <Flex direction="column">
-      {isRenote ? (
-        <Flex ml="2" align="center" gap="1">
+      <Flex ml="2" align="center" gap="1" display={isRenote ? "flex" : "none"}>
           <RenoteIcon fontSize={18} />
           <Text>{author.name}さんがリノート</Text>
         </Flex>
