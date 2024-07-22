@@ -33,7 +33,7 @@ export default function NoteBody({ content, style }: Props) {
                 overflow: "hidden",
                 display: "-webkit-box",
                 WebkitBoxOrient: "vertical",
-                WebkitLineClamp: 5,
+                WebkitLineClamp: 5
               }
             : {}
         }

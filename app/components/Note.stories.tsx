@@ -8,13 +8,13 @@ export default {
     author: {
       id: "example",
       name: "表示名",
-      iconUrl: "https://api.dicebear.com/9.x/pixel-art/png",
+      iconUrl: "https://api.dicebear.com/9.x/pixel-art/png"
     },
-    content: "あいうえお",
+    content: "あいうえお"
   },
   argTypes: {
-    content: { control: "text" },
-  },
+    content: { control: "text" }
+  }
 } satisfies Meta<typeof Note>;
 
 type Story = StoryObj<typeof Note>;
@@ -23,8 +23,8 @@ export const Default: Story = {};
 
 export const ReadMore: Story = {
   args: {
-    content: "あ".repeat(3000),
-  },
+    content: "あ".repeat(3000)
+  }
 };
 
 export const Renote: Story = {
@@ -33,14 +33,14 @@ export const Renote: Story = {
     renote: {
       author: {
         id: "renote",
-        name: "リノート元",
+        name: "リノート元"
       },
-      content: "あいうえお",
-    },
+      content: "あいうえお"
+    }
   },
   argTypes: {
-    content: { table: { disable: true } },
-  },
+    content: { table: { disable: true } }
+  }
 };
 
 export const QuotedRenote: Story = {
@@ -49,9 +49,9 @@ export const QuotedRenote: Story = {
     renote: {
       author: {
         id: "quote",
-        name: "引用元",
+        name: "引用元"
       },
-      content: "引用元の投稿",
-    },
-  },
+      content: "引用元の投稿"
+    }
+  }
 };
