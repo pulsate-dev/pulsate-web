@@ -22,14 +22,12 @@ export default function Note({ author, content, renote }: Props) {
           <RenoteIcon fontSize={18} />
           <Text>{author.name}さんがリノート</Text>
         </Flex>
-      ) : (
-        <></>
-      )}
+      <Box py="2" pl="2">
       {isRenote ? <Avatar {...renote.author} /> : <Avatar {...author} />}
-      <NoteBody
-        content={isRenote ? renote.content : content}
-        style={{ ml: "4" }}
-      />
+      </Box>
+      <Box pl="4" pb="2">
+        <NoteBody content={isRenote ? renote.content : content} />
+      </Box>
       {isQuoted ? <QuoteNote {...renote} /> : <></>}
     </Flex>
   );
