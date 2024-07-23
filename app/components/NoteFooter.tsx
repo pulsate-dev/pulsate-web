@@ -7,17 +7,37 @@ import ShareIcon from "./icons/ShareIcon";
 export default function NoteFooter() {
   return (
     <Flex justify={"between"}>
-      <IconButton variant="ghost">
-        <ReplyIcon width="18" height="18" />
+      <IconButton
+        variant="ghost"
+        color="gray"
+        size={{ initial: "4", md: "3" }}
+        highContrast
+      >
+        <ReplyIcon width="22" height="22" />
       </IconButton>
-      <IconButton variant="ghost">
-        <RenoteIcon width="18" height="18" />
+      <IconButton
+        variant="ghost"
+        color="gray"
+        size={{ initial: "4", md: "3" }}
+        highContrast
+      >
+        <RenoteIcon width="22" height="22" />
       </IconButton>
-      <IconButton variant="ghost">
-        <EmojiIcon width="18" height="18" />
+      <IconButton
+        variant="ghost"
+        color="gray"
+        size={{ initial: "4", md: "3" }}
+        highContrast
+      >
+        <EmojiIcon width="22" height="22" />
       </IconButton>
-      <IconButton variant="ghost">
-        <ShareIcon width="18" height="18" />
+      <IconButton
+        variant="ghost"
+        color="gray"
+        size={{ initial: "4", md: "3" }}
+        highContrast
+      >
+        <ShareIcon width="22" height="22" />
       </IconButton>
     </Flex>
   );
