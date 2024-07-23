@@ -6,13 +6,14 @@ import NoteBody from "./NoteBody";
 
 type Props = ComponentProps<typeof Note>;
 
-export default function QuoteNote({ author, content }: Props) {
+export default function QuotedNote({ author, content }: Props) {
   return (
     <Box
       ml="6"
       style={{
         borderStyle: "dashed",
-        borderWidth: "1px"
+        borderWidth: "1px",
+        borderRadius: "var(--radius-2)"
       }}
     >
       <Box pl="2" py="2">
