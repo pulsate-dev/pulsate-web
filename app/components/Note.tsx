@@ -1,9 +1,9 @@
-import { Box, Flex, Text } from "@radix-ui/themes";
+import { Box, Flex, Link, Text } from "@radix-ui/themes";
 import { ComponentProps } from "react";
 import Avatar from "./Avatar";
 import NoteBody from "./NoteBody";
 import NoteFooter from "./NoteFooter";
-import QuoteNote from "./QuoteNote";
+import QuotedNote from "./QuotedNote";
 import RenoteIcon from "./icons/RenoteIcon";
 
 type Props = {
@@ -18,9 +18,12 @@ export default function Note({ author, content, renote }: Props) {
 
   return (
     <Flex direction="column">
-      <Flex ml="2" align="center" gap="1" display={isRenote ? "flex" : "none"}>
+      <Flex pl="2" align="center" gap="1" display={isRenote ? "flex" : "none"}>
         <RenoteIcon fontSize={18} />
-        <Text>{author.name}さんがリノート</Text>
+        <Text>
+          <Link href="">{author.nickname}</Link>
+          さんがリノート
+        </Text>
       </Flex>
       <Box py="2" pl="2">
         {isRenote ? <Avatar {...renote.author} /> : <Avatar {...author} />}
@@ -28,8 +31,8 @@ export default function Note({ author, content, renote }: Props) {
       <Box pl="4" pb="2">
         <NoteBody content={isRenote ? renote.content : content} />
       </Box>
-      {isQuoted ? <QuoteNote {...renote} /> : <></>}
-      <Box pt="2">
+      {isQuoted ? <QuotedNote {...renote} /> : <></>}
+      <Box pl="2" pt="3">
         <NoteFooter />
       </Box>
     </Flex>

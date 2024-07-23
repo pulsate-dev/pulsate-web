@@ -6,8 +6,8 @@ export default {
   component: Note,
   args: {
     author: {
-      id: "example",
-      name: "表示名",
+      name: "example",
+      nickname: "Example",
       iconUrl: "https://api.dicebear.com/9.x/pixel-art/png"
     },
     content: "あいうえお"
@@ -32,8 +32,9 @@ export const Renote: Story = {
     content: null,
     renote: {
       author: {
-        id: "renote",
-        name: "リノート元"
+        name: "renote",
+        nickname: "リノート元",
+        iconUrl: ""
       },
       content: "あいうえお"
     }
@@ -48,8 +49,9 @@ export const QuotedRenote: Story = {
     content: "引用",
     renote: {
       author: {
-        id: "quote",
-        name: "引用元"
+        name: "quote",
+        nickname: "引用元",
+        iconUrl: ""
       },
       content: "引用元の投稿"
     }
