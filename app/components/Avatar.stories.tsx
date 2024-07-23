@@ -10,17 +10,17 @@ type Story = StoryObj<typeof Avatar>;
 
 export const Default: Story = {
   args: {
-    id: "example",
-    name: "表示名",
+    name: "example",
+    nickname: "Example",
     iconUrl: "https://api.dicebear.com/9.x/pixel-art/png"
   }
 };
 
 export const Fallback: Story = {
   args: {
-    id: "fallback",
-    name: "IconUrlが取得できなかった場合",
-    iconUrl: undefined
+    name: "fallback",
+    nickname: "IconURLが無効だった場合",
+    iconUrl: ""
   },
   argTypes: {
     iconUrl: { table: { disable: true } }

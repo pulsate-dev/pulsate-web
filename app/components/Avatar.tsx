@@ -1,24 +1,26 @@
 import { Flex, Avatar as RadixAvatar, Text } from "@radix-ui/themes";
 
 type Props = {
-  id: string;
   name: string;
-  iconUrl?: string;
+  nickname: string;
+  iconUrl: string;
 };
 
-export default function Avatar({ id, name, iconUrl }: Props) {
+export default function Avatar({ name, nickname, iconUrl }: Props) {
   return (
     <Flex align="center" gap="2">
       <RadixAvatar
         size="5"
         radius="full"
-        fallback={id.slice(0, 2)}
+        fallback={name.slice(0, 2)}
         src={iconUrl}
       />
       <div>
-        <Text>{name}</Text>
+        <Text weight="bold" size="4">
+          {nickname}
+        </Text>
         <br />
-        <Text>@{id}</Text>
+        <Text color="gray">@{name}</Text>
       </div>
     </Flex>
   );
