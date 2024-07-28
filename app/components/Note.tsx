@@ -34,7 +34,7 @@ export default function Note({ author, content, renote }: Props) {
         <NoteBody content={isRenote ? renote.content : content} />
       </Box>
       {isQuoted ? <QuotedNote {...renote} /> : <></>}
-      <Box pl="2" pt="3">
+      <Box px="3" pt="3">
         <NoteFooter />
       </Box>
     </Flex>

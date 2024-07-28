@@ -6,7 +6,7 @@ import ShareIcon from "./icons/ShareIcon";
 
 export default function NoteFooter() {
   return (
-    <Flex justify={"between"}>
+    <Flex justify="between">
       <IconButton
         variant="ghost"
         color="gray"
