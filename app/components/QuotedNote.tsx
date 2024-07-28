@@ -12,7 +12,7 @@ export default function QuotedNote({ author, content }: Props) {
       ml="6"
       style={{
         borderStyle: "dashed",
-        borderWidth: "1px",
+        borderWidth: "2px",
         borderRadius: "var(--radius-2)"
       }}
     >
