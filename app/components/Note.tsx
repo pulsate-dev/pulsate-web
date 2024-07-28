@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Text } from "@radix-ui/themes";
+import { Box, Flex, Link, Strong, Text } from "@radix-ui/themes";
 import { ComponentProps } from "react";
 import Avatar from "./Avatar";
 import NoteBody from "./NoteBody";
@@ -21,7 +21,9 @@ export default function Note({ author, content, renote }: Props) {
       <Flex pl="2" align="center" gap="1" display={isRenote ? "flex" : "none"}>
         <RenoteIcon fontSize={18} />
         <Text>
-          <Link href="">{author.nickname}</Link>
+          <Strong>
+            <Link href="">{author.nickname}</Link>
+          </Strong>
           さんがリノート
         </Text>
       </Flex>
