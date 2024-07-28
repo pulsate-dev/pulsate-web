@@ -37,6 +37,8 @@ export default function NoteBody({ content }: Props) {
       </Text>
       {height >= 120 ? (
         <Button
+          variant="outline"
+          highContrast
           onClick={() => {
             setReadMore(!readMore);
           }}
