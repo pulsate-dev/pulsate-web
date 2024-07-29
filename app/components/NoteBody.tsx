@@ -1,4 +1,4 @@
-import { Button, Flex, Text } from "@radix-ui/themes";
+import { Box, Button, Flex, Text } from "@radix-ui/themes";
 import { useEffect, useRef, useState } from "react";
 
 type Props = {
@@ -36,16 +36,17 @@ export default function NoteBody({ content }: Props) {
         {content}
       </Text>
       {height >= 120 ? (
-        <Button
-          variant="outline"
-          highContrast
-          onClick={() => {
-            setReadMore(!readMore);
-          }}
-          style={{ margin: "auto", maxWidth: "100px" }}
-        >
-          {readMore ? "閉じる" : "続きを読む"}
-        </Button>
+        <Box pt="2" style={{ margin: "auto", maxWidth: "100px" }}>
+          <Button
+            variant="outline"
+            highContrast
+            onClick={() => {
+              setReadMore(!readMore);
+            }}
+          >
+            {readMore ? "閉じる" : "続きを読む"}
+          </Button>
+        </Box>
       ) : (
         <></>
       )}
