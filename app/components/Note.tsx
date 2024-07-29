@@ -33,8 +33,12 @@ export default function Note({ author, content, renote }: Props) {
       <Box pl="4" pb="2">
         <NoteBody content={isRenote ? renote.content : content} />
       </Box>
-      {isQuoted ? <QuotedNote {...renote} /> : <></>}
-      <Box px="3" pt="3">
+      {isQuoted && (
+        <Box pl="4">
+          <QuotedNote {...renote} />
+        </Box>
+      )}
+      <Box p="3">
         <NoteFooter />
       </Box>
     </Flex>
