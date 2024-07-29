@@ -9,7 +9,6 @@ type Props = ComponentProps<typeof Note>;
 export default function QuotedNote({ author, content }: Props) {
   return (
     <Box
-      ml="6"
       style={{
         borderStyle: "dashed",
         borderWidth: "2px",
