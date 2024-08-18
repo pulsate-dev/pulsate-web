@@ -41,7 +41,11 @@ export default function LoginPage() {
         <Link style={{ color: "var(--gray-1)" }}>{t("aboutPulsate")}</Link>
         <Link
           href="https://github.com/pulsate-dev/pulsate"
-          style={{ color: "var(--gray-1)" }}
+          style={{
+            color: "var(--gray-1)",
+            textDecoration: "underline",
+            textDecorationColor: "var(--accent-6)"
+          }}
         >
           {t("sourceCode")}
         </Link>
