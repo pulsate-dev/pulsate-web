@@ -1,4 +1,12 @@
 {
   "appName": "Pulsate",
-  "welcome": "ようこそ"
+  "welcome": "ようこそ",
+  "login": "ログイン",
+  "id": "ID",
+  "idAndMailAddress": "ID / メールアドレス",
+  "password": "パスワード",
+  "register": "新規登録",
+  "forgotPassword": "パスワードを忘れたら...",
+  "aboutPulsate": "Pulsateについて",
+  "sourceCode": "ソースコード"
 }
