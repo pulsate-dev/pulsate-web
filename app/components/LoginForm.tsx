@@ -23,7 +23,7 @@ export default function LoginForm() {
         <Text>{t("password")}</Text>
         <TextField.Root type="password" />
       </Box>
-      <Flex direction="column" align="center" gap="2" mx="auto">
+      <Flex direction="column" align="center" gap="2" mx="auto" mt="3">
         <Button size="3">{t("login")}</Button>
         <Link>{t("register")}</Link>
         <Link>{t("forgotPassword")}</Link>
