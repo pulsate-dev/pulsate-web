@@ -1,4 +1,10 @@
 {
   "appName": "Pulsate",
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "login": "Login",
+  "id": "ID",
+  "idAndMailAddress": "ID / Email Address",
+  "password": "Password",
+  "register": "Register",
+  "forgotPassword": "Forgot password..."
 }
