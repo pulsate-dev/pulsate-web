@@ -6,5 +6,7 @@
   "idAndMailAddress": "ID / メールアドレス",
   "password": "パスワード",
   "register": "新規登録",
-  "forgotPassword": "パスワードを忘れたら..."
+  "forgotPassword": "パスワードを忘れたら...",
+  "aboutPulsate": "Pulsateについて",
+  "sourceCode": "ソースコード"
 }

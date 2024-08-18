@@ -6,5 +6,7 @@
   "idAndMailAddress": "ID / Email Address",
   "password": "Password",
   "register": "Register",
-  "forgotPassword": "Forgot password..."
+  "forgotPassword": "Forgot password...",
+  "aboutPulsate": "About Pulsate",
+  "sourceCode": "Source code"
 }
