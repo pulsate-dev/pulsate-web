@@ -21,7 +21,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{ margin: "0" }}>
         <I18nextProvider i18n={i18n.default}>
           <Theme>{children}</Theme>
         </I18nextProvider>
