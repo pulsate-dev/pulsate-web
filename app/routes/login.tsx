@@ -1,86 +1,51 @@
-import {
-  Box,
-  Button,
-  Card,
-  Flex,
-  Link,
-  TabNav,
-  Text,
-  TextField
-} from "@radix-ui/themes";
+import { Box, Flex, Link, Text } from "@radix-ui/themes";
+import { version } from "package.json";
+import { useTranslation } from "react-i18next";
+import LoginForm from "~/components/LoginForm";
 
 export default function LoginPage() {
+  const { t } = useTranslation();
+
   return (
-    <Box>
-      <Flex
-        align="center"
-        justify="center"
-        m="-2"
-        width="100vw"
-        height="100vh"
-        direction="column"
+    <Flex
+      direction="column"
+      justify="end"
+      align="center"
+      minHeight="100vh"
+      style={{ backgroundColor: "#0f0e3b" }}
+    >
+      <Box
         style={{
-          background: "#0f0e3b"
+          borderStyle: "solid",
+          borderWidth: "1px",
+          borderRadius: "var(--radius-6)",
+          backgroundColor: "var(--gray-1)"
         }}
+        minWidth={{ xs: "520px" }}
+        p="6"
+        mx="4"
+        my="auto"
       >
-        <Flex
-          style={{
-            background: "var(--gray-9)",
-            borderRadius: "var(--radius-3)",
-            minWidth: "30%"
-          }}
-          direction="column"
-          gap="4"
-          p="4"
+        <LoginForm />
+      </Box>
+      <Flex
+        direction={{ initial: "column", xs: "row" }}
+        mr="auto"
+        ml="3"
+        mb="2"
+        gap={{ initial: "1", xs: "2" }}
+      >
+        <Text style={{ color: "var(--gray-1)" }}>
+          {t("appName")} v.{version}
+        </Text>
+        <Link style={{ color: "var(--gray-1)" }}>{t("aboutPulsate")}</Link>
+        <Link
+          href="https://github.com/pulsate-dev/pulsate"
+          style={{ color: "var(--gray-1)" }}
         >
-          <Text size="6" weight="bold" style={{}}>
-            ログイン
-          </Text>
-          <Box>
-            <Text size="4" style={{}}>
-              ID/メールアドレス
-            </Text>
-            <TextField.Root />
-          </Box>
-          <Box>
-            <Text size="4" style={{}}>
-              パスワード
-            </Text>
-            <TextField.Root />
-          </Box>
-          <Button style={{ margin: "auto", maxWidth: "100px" }}>
-            ログイン
-          </Button>
-          <Link href="/register" style={{ margin: "auto" }}>
-            新規登録
-          </Link>
-        </Flex>
+          {t("sourceCode")}
+        </Link>
       </Flex>
-      <footer
-        style={{ position: "absolute", bottom: 0, color: "var(--gray-1)" }}
-      >
-        <Flex gap="4">
-          <Text style={{ color: "var(--gray-1)" }}>Pulsate v0.1.0</Text>
-          <Link
-            href="https://pulsate.dev/about"
-            underline="always"
-            style={{
-              color: "var(--gray-1)"
-            }}
-          >
-            Pulsateについて
-          </Link>
-          <Link
-            href="https://github.com/pulsate-dev"
-            underline="always"
-            style={{
-              color: "var(--gray-1)"
-            }}
-          >
-            ソースコード
-          </Link>
-        </Flex>
-      </footer>
-    </Box>
+    </Flex>
   );
 }
