@@ -17,25 +17,17 @@ export const FollowButton = ({
   accountFollowStatus,
   isFollowed
 }: FollowButtonProps) => {
-  let buttonLabel: string;
-  switch (accountFollowStatus) {
-    case "notFollowing":
-      buttonLabel = isFollowed ? t("followBack") : t("follow");
-      break;
-    case "following":
-      buttonLabel = t("following");
-      break;
-    case "self":
-      buttonLabel = t("editProfile");
-      break;
-    case "blocking":
-      buttonLabel = t("blocking");
-      break;
-  }
+  const buttonLabel: Record<FollowButtonProps["accountFollowStatus"], string> =
+    {
+      notFollowing: isFollowed ? t("followBack") : t("follow"),
+      following: t("following"),
+      self: t("editProfile"),
+      blocking: t("blocking")
+    };
 
   return (
     <Button color={accountFollowStatus === "blocking" ? "ruby" : "indigo"}>
-      {buttonLabel}
+      {buttonLabel[accountFollowStatus]}
     </Button>
   );
 };

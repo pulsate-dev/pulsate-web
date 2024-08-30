@@ -50,22 +50,22 @@ export const AccountProfile = ({
       </div>
 
       <div className={styles.accountProfileStatus}>
-        <Text size={"3"}>{bio}</Text>
+        <Text size="3">{bio}</Text>
 
         <div className={styles.accountFollowCount}>
-          <Text as={"div"} size={"4"}>
-            <Text as={"span"} weight={"medium"}>
+          <Text as="div" size="4">
+            <Text as="span" weight="medium">
               {followingCount}
             </Text>{" "}
-            <Text as={"span"} color={"gray"}>
+            <Text as="span" color="gray">
               {t("following")}
             </Text>
           </Text>
-          <Text as={"div"} size={"4"}>
-            <Text as={"span"} weight={"medium"}>
+          <Text as="div" size="4">
+            <Text as="span" weight="medium">
               {followersCount}
             </Text>{" "}
-            <Text as={"span"} color={"gray"}>
+            <Text as="span" color="gray">
               {t("followers")}
             </Text>
           </Text>
