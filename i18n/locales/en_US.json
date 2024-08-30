@@ -8,5 +8,12 @@
   "register": "Register",
   "forgotPassword": "Forgot password...",
   "aboutPulsate": "About Pulsate",
-  "sourceCode": "Source code"
+  "sourceCode": "Source code",
+  "follow": "follow",
+  "unfollow": "Unfollow",
+  "following": "following",
+  "followers": "followers",
+  "editProfile": "edit profile",
+  "blocking": "blocking",
+  "followBack": "followback"
 }

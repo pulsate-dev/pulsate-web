@@ -8,5 +8,12 @@
   "register": "新規登録",
   "forgotPassword": "パスワードを忘れたら...",
   "aboutPulsate": "Pulsateについて",
-  "sourceCode": "ソースコード"
+  "sourceCode": "ソースコード",
+  "follow": "フォロー",
+  "unfollow": "フォロー解除",
+  "following": "フォロー中",
+  "followers": "フォロワー",
+  "editProfile": "プロフィールを編集",
+  "blocking": "ブロック中",
+  "followBack": "フォローバック"
 }
