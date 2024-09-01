@@ -15,5 +15,8 @@
   "followers": "フォロワー",
   "editProfile": "プロフィールを編集",
   "blocking": "ブロック中",
-  "followBack": "フォローバック"
+  "followBack": "フォローバック",
+  "notification.read": "既読にする",
+  "announce.warn": "警告",
+  "announce.info": "情報"
 }
