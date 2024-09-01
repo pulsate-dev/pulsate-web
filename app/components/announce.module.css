@@ -1,0 +1,23 @@
+.announceTitleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .announceTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  margin-bottom: .5em;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  span {
+    margin-right: 1rem;
+  }
+}
