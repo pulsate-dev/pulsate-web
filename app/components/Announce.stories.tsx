@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Announce } from './Announce';
+import { Announce } from "./Announce";
 
 const meta = {
-  component: Announce,
+  component: Announce
 } satisfies Meta<typeof Announce>;
 
 export default meta;
