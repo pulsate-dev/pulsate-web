@@ -4,6 +4,17 @@
   align-items: center;
   justify-content: space-between;
 
+  .announceIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .5rem;
+  }
+
+  .readButtonIcon {
+    width: .8rem;
+    height: .8rem;
+  }
+
   .announceTitle {
     display: flex;
     flex-direction: row;
@@ -17,7 +28,4 @@
     padding: 0;
   }
 
-  span {
-    margin-right: 1rem;
-  }
 }

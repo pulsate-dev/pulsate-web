@@ -29,22 +29,19 @@ export const Announce = ({
               announceType === "warn" ? "announce.warn" : "announce.info"
             )}
           >
-            <Text as="span">
-              ️
               {announceType === "warn" ? (
-                <ExclamationTriangleIcon />
+                <ExclamationTriangleIcon className={styles.announceIcon}/>
               ) : (
-                <InfoCircledIcon />
+                <InfoCircledIcon className={styles.announceIcon}/>
               )}
-            </Text>
           </Tooltip>
           <Text as="p" size="5" weight="medium">
             {title}
           </Text>
         </div>
         <Tooltip content={t("notification.read")}>
-          <IconButton className={styles.readButton} variant="outline">
-            <ThickCheckIcon />
+          <IconButton variant="outline">
+            <ThickCheckIcon className={styles.readButtonIcon}/>
           </IconButton>
         </Tooltip>
       </div>
