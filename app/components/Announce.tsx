@@ -21,7 +21,7 @@ export const Announce = ({
   updatedAt
 }: AnnounceProps) => {
   return (
-    <>
+    <div>
       <div className={styles.announceTitleContainer}>
         <div className={styles.announceTitle}>
           <Tooltip
@@ -29,11 +29,11 @@ export const Announce = ({
               announceType === "warn" ? "announce.warn" : "announce.info"
             )}
           >
-              {announceType === "warn" ? (
-                <ExclamationTriangleIcon className={styles.announceIcon}/>
-              ) : (
-                <InfoCircledIcon className={styles.announceIcon}/>
-              )}
+            {announceType === "warn" ? (
+              <ExclamationTriangleIcon className={styles.announceIcon} />
+            ) : (
+              <InfoCircledIcon className={styles.announceIcon} />
+            )}
           </Tooltip>
           <Text as="p" size="5" weight="medium">
             {title}
@@ -41,7 +41,7 @@ export const Announce = ({
         </div>
         <Tooltip content={t("notification.read")}>
           <IconButton variant="outline">
-            <ThickCheckIcon className={styles.readButtonIcon}/>
+            <ThickCheckIcon className={styles.readButtonIcon} />
           </IconButton>
         </Tooltip>
       </div>
@@ -51,6 +51,6 @@ export const Announce = ({
       <Text size="2" color="gray">
         <Time date={updatedAt} />
       </Text>
-    </>
+    </div>
   );
 };
