@@ -7,7 +7,7 @@ import {
   InfoCircledIcon
 } from "@radix-ui/react-icons";
 
-interface AnnounceProps {
+export interface AnnounceProps {
   announceType: "warn" | "info";
   title: string;
   body: string;

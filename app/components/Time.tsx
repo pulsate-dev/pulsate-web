@@ -1,4 +1,4 @@
-interface TimeProps {
+export interface TimeProps {
   date: Date;
 }
 
@@ -7,22 +7,28 @@ const relativeTimeFormatter = new Intl.RelativeTimeFormat(undefined, {
   style: "short"
 });
 
+const Millisecond = 1 as const;
+const SECOND = Millisecond * 1000;
+const MINUTE = SECOND * 60;
+const HOUR = MINUTE * 60;
+const DAY = HOUR * 24;
+
 const getRelativeTimeDiff = (date: Date, now = new Date()) => {
   const diffMilliseconds = now.getTime() - date.getTime();
   const absDiff = Math.abs(diffMilliseconds);
 
-  if (absDiff < 60_000) {
-    const diffSeconds = Math.floor(diffMilliseconds / 1_000);
+  if (absDiff < MINUTE) {
+    const diffSeconds = Math.floor(diffMilliseconds / SECOND);
     return relativeTimeFormatter.format(-diffSeconds, "second");
-  } else if (absDiff < 3_600_000) {
-    const diffMinutes = Math.floor(diffMilliseconds / 60_000);
+  } else if (absDiff < HOUR) {
+    const diffMinutes = Math.floor(diffMilliseconds / MINUTE);
     return relativeTimeFormatter.format(-diffMinutes, "minute");
-  } else if (absDiff < 86_400_000) {
-    const diffHours = Math.floor(diffMilliseconds / 3_600_000);
+  } else if (absDiff < DAY) {
+    const diffHours = Math.floor(diffMilliseconds / HOUR);
     return relativeTimeFormatter.format(-diffHours, "hour");
   }
 
-  const diffDays = Math.floor(diffMilliseconds / 86_400_000);
+  const diffDays = Math.floor(diffMilliseconds / DAY);
   if (Math.abs(diffDays) < 30) {
     return relativeTimeFormatter.format(-diffDays, "day");
   }
