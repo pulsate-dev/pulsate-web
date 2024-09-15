@@ -38,7 +38,7 @@
     "react-i18next": "^15.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.0",
     "@chromatic-com/storybook": "^1.6.1",
     "@remix-run/dev": "^2.10.3",
     "@storybook/addon-essentials": "^8.2.4",
