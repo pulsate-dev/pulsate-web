@@ -15,5 +15,8 @@
   "followers": "followers",
   "editProfile": "edit profile",
   "blocking": "blocking",
-  "followBack": "followback"
+  "followBack": "followback",
+  "notification.read": "Mark as read",
+  "announce.warn": "Warning",
+  "announce.info": "Information"
 }
