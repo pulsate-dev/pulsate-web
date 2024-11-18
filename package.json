@@ -2,7 +2,7 @@
   "name": "pulsate-web",
   "description": "Pulsate official web client",
   "version": "0.1.0",
-  "packageManager": "pnpm@9.13.0",
+  "packageManager": "pnpm@9.13.2",
   "type": "module",
   "license": "Apache-2.0",
   "author": {
